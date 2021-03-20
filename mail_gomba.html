@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: #EEEEEE;
+            margin: 20px;
+            color: #777;
+        }
+
+        table {
+            border: 1px solid #777;
+            background: white;
+            width: 600px
+        }
+
+        th,
+        td {
+            padding: 3px;
+        }
+
+        th {
+            text-align: right;
+            vertical-align: top;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        header {
+            position: absolute;
+            margin: 2px;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 18px;
+            background: #777;
+            color: white;
+            font-weight: bold;
+        }
+
+        html>body .header {
+            width: 99%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"> Zdravo {name},<br /> Hvala vam na kupovini. Vaš broj porudžbine je <b>{uniqueNumber}</b> .
+        <br /> </div> <br />
+    <table>
+        <tr>
+            <td>Kat. br.</td>
+            <td>Proizvod</td>
+            <td>Količina</td>
+            <td>Cena</td>
+        </tr> {items} <tr>
+            <th colspan="3">Cena isporuke:</th>
+            <td>{shipmentCost}</td>
+        </tr>
+        <tr>
+            <th colspan="3">Popust:</th>
+            <td>{discount}</td>
+        </tr>
+        <tr>
+            <th colspan="3">Ukupna vrednost:</th>
+            <td>{total}</td>
+        </tr>
+    </table> {shipmentInfoAdd} <br /> <br />
+    <table>
+        <tr>
+            <td colspan="2">Informacije o kupcu</td>
+        </tr>
+        <tr>
+            <td>Ime:</td>
+            <th>{name} {nameLast}</th>
+        </tr>
+        <tr>
+            <td>Adresa</td>
+            <th>{address}</th>
+        </tr>
+        <tr>
+            <td>Grad</td>
+            <th>{place}</th>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <th>{email}</th>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <th>{phone}</th>
+        </tr>
+    </table> <br /> <br />
+    <table>
+        <tr>
+            <td colspan="2">Informacije o isporuci</td>
+        </tr>
+        <tr>
+            <td>Ime:</td>
+            <th>{sh_name} {sh_nameLast}</th>
+        </tr>
+        <tr>
+            <td>Adresa</td>
+            <th>{sh_address}</th>
+        </tr>
+        <tr>
+            <td>Grad</td>
+            <th>{sh_place}</th>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <th>{sh_phone}</th>
+        </tr>
+        <tr>
+            <td>Napomena</td>
+            <th>{sh_note}</th>
+        </tr>
+        <tr>
+            <td>Način isporuke</td>
+            <th>{shipmentMethodName}</th>
+        </tr>
+        <tr>
+            <td>Način plaćanja</td>
+            <th>{paymentMethodTxt}</th>
+        </tr>
+    </table> {invoice} <br /><br /> {paymentInfoAdd} Hvala na kupovini!
+</body>
+
+</html>

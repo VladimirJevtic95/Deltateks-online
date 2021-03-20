@@ -1,0 +1,648 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+    <style type="text/css" rel="stylesheet" media="all">
+        /* Base ------------------------------ */
+
+        @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+        body {
+            width: 100% !important;
+            height: 100%;
+            margin: 0;
+            -webkit-text-size-adjust: none;
+        }
+
+        a {
+            color: #3869D4;
+        }
+
+        a img {
+            border: none;
+        }
+
+        td {
+            /* word-break: break-word; */
+        }
+
+        .preheader {
+            display: none !important;
+            visibility: hidden;
+            mso-hide: all;
+            font-size: 13px;
+            line-height: 1px;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        /* Type ------------------------------ */
+
+        body,
+        td,
+        th {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #1F1F1F;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #1F1F1F;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        p,
+        ul,
+        ol,
+        blockquote {
+            margin: .4em 0 1.1875em;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        p.sub {
+            font-size: 13px;
+        }
+
+        .span_bold {
+            font-weight: 600;
+        }
+
+        /* Utilities ------------------------------ */
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        /* Data table ------------------------------ */
+
+        td,
+        th {
+            text-align: left;
+            padding: 8px;
+        }
+
+        /* TABELA ID PORUDZBINE & DATE ------------------------------*/
+
+        #tabelaOrderIDDate {
+            padding: 0 !important;
+        }
+
+        #tabelaOrderIDDate th,
+        #tabelaOrderIDDate td {
+            padding: 0px;
+        }
+
+        /* END TABELA ID PORUDZBINE & DATE------------------------------ */
+
+        /* END TABELA KRATAK INFO NARUDZBINE------------------------------ */
+
+        #kratakInfo {
+            padding: 20px 20px 0 20px;
+            font-size: 13px !important;
+        }
+
+        #kratakInfo td {
+            padding: 5px;
+        }
+
+        .hr,
+        hr {
+            margin: 20px;
+            height: 1px;
+            background-color: #c4c4c4;
+            border: none;
+        }
+
+        /* END TABELA KRATAK INFO NARUDZBINE------------------------------ */
+
+        /* TABELA LISTA ORDER STVARI------------------------------ */
+
+        #tabelaOrder tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+
+        #tabelaOrder {
+            border: 1px solid #f7f7f7;
+            padding: 0px;
+        }
+
+        #tabelaOrder th {
+            background: #7FA7D8;
+            font-size: 13px;
+            color: #FFFFFF;
+        }
+
+        #tabelaOrder td {
+            font-size: 13px;
+            color: #1f1f1f;
+        }
+
+        /* END TABELA LISTA ORDER STVARI------------------------------ */
+
+        /* TABELA CENA------------------------------ */
+
+        #tabelaCena {
+            padding: 0 !important;
+        }
+
+        #tabelaCena td {
+            padding: 2px !important;
+        }
+
+        #tabelaCena p {
+            font-size: 13px !important;
+        }
+
+        .purchase {
+            width: 100%;
+            margin: 0;
+            padding: 10px 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .purchase_content {
+            width: 100%;
+            margin: 0;
+            padding: 25px 0 0 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .purchase_footer {
+            border-top: 1px solid #000000;
+        }
+
+        .purchase_total {
+            margin-top: 5px;
+            font-size: 15px;
+            text-align: right;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        #PDV {
+            font-weight: normal;
+            font-size: 9px;
+        }
+
+        .purchase_other {
+            margin: 0;
+            text-align: right;
+            font-weight: normal;
+            color: #333333;
+        }
+
+        /* END TABELA CENA------------------------------ */
+
+        /* TABELA INFORMACIJE O KUPCU I DOSTAVI------------------------------ */
+
+        #tabelaInfoKupac h3 {
+            margin-top: 20px;
+            margin-bottom: 3px;
+        }
+
+        #tabelaInfoKupac th,
+        #tabelaInfoKupac td {
+            font-size: 14px;
+            padding-top: 3px;
+            padding-bottom: 5px;
+        }
+
+        #tabelaInfoKupac th {
+            background-color: #FFFFFF;
+        }
+
+        /* END TABELA INFORMACIJE O KUPCU I DOSTAVI------------------------------ */
+
+
+        #tableContact td {
+            font-size: 13px;
+            color: #1f1f1f;
+        }
+
+        p {
+            color: #1F1F1F;
+        }
+
+        p.sub {
+            color: #818181;
+        }
+
+        .email-wrapper {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            background-color: #F4F4F7;
+        }
+
+        .email-content {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        /* Masthead ----------------------- */
+
+        .email-masthead {
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .email-masthead_logo {
+            width: 94px;
+        }
+
+        .email-masthead_name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #A8AAAF;
+            text-decoration: none;
+            text-shadow: 0 1px 0 white;
+        }
+
+        /* Body ------------------------------ */
+
+        .email-body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            background-color: #FFFFFF;
+        }
+
+        .email-body_inner {
+            width: 570px;
+            margin: 0 auto;
+            padding: 0;
+            -premailer-width: 570px;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            background-color: #FFFFFF;
+        }
+
+        .email-footer {
+            width: 570px;
+            margin: 0 auto;
+            padding: 0;
+            -premailer-width: 570px;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            text-align: center;
+        }
+
+        .email-footer p {
+            color: #6B6E76;
+        }
+
+        .body-action {
+            width: 100%;
+            margin: 30px auto;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            text-align: center;
+        }
+
+        .body-sub {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #EAEAEC;
+        }
+
+        .content-cell {
+            padding: 20px;
+        }
+
+        /*Media Queries ------------------------------ */
+
+        @media only screen and (max-width: 600px) {
+
+            .email-body_inner,
+            .email-footer {
+                width: 100% !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <span class="preheader">Tvoja narudžbina ({uniqueNumber}) iz Deltateksa.</span>
+    <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+            <td align="center">
+                <table class="email-content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                        <td class="email-masthead">
+                            <img src="https://deltateks.rs/mail_src/logomailtemplate.png" alt="Deltateks logo">
+                        </td>
+                    </tr>
+                    <!-- Email Body -->
+                    <tr>
+                        <td class="email-body" width="100%" cellpadding="0" cellspacing="0">
+                            <table class="email-body_inner" align="center" width="570" cellpadding="0" cellspacing="0"
+                                role="presentation">
+                                <tr>
+                                    <td class="content-cell" style="padding:0!important;">
+                                        <div>
+                                            <table id="tabelaOrderIDDate" class="purchase" width="100%" cellpadding="0"
+                                                cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <p><span class="span_bold">Narudžbina:</span> {uniqueNumber}</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="align-right"><span class="span_bold">Datum:</span>
+                                                            {orderDate}
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Body content -->
+                                <tr>
+                                    <td class="content-cell">
+                                        <div>
+                                            <h1>Primili smo tvoju narudžbinu! Hvala! </h1>
+                                            <P>Zdravo {name},<br /> Znamo da osećaš veliko
+                                                uzbuđenje i zato već naporno radimo da dobiješ pošiljku što je pre
+                                                moguće.
+                                            </P>
+
+                                            <table id="kratakInfo" width="100%" cellpadding="0" cellspacing="0"
+                                                role="presentation">
+                                                <tr>
+                                                    <td class="kratakInfo_content">
+                                                        <table width="100%" cellpadding="0" cellspacing="0"
+                                                            role="presentation">
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="span_bold">Broj narudžbine:</span>
+                                                                    {uniqueNumber}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="span_bold">Datum narudžbine:</span>
+                                                                    {orderDate}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="span_bold">Način isporuke:</span>
+                                                                    {shipmentMethodName}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="span_bold">Način plaćanja:</span>
+                                                                    {paymentMethodTxt}
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <hr class="hr">
+
+                                            <p>Ako želiš da proveriš status pošiljke u bilo koje doba, uloguj se na svoj
+                                                DELTATEKS.rs nalog. Poslaćemo ti novi e-mail čim završimo
+                                                pripremu tvoje pošiljke. Uzbudljivo, zar ne?</p>
+
+                                            <p>Uobičajeni rok za paketne isporuke je između 1 i 4 radna dana od trenutka
+                                                preuzimanja paketa od strane kurirske sluzbe. </p>
+
+                                            <table id="tabelaOrder" class="purchase" width="100%" cellpadding="0"
+                                                cellspacing="0">
+                                                <tr>
+                                                    <th>Šifra</th>
+                                                    <th>Proizvod</th>
+                                                    <th>Kol.</th>
+                                                    <th>Cena</th>
+                                                </tr>
+                                                <!-- {items} -->
+                                                <tr>
+                                                    {items}
+                                                </tr>
+
+                                            </table>
+                                            <table id="tabelaCena" class="purchase" width="100%" cellpadding="0"
+                                                cellspacing="0">
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <table class="purchase_content" width="100%" cellpadding="0"
+                                                            cellspacing="0">
+                                                            <tr>
+                                                                <td width="70%" valign="middle">
+                                                                    <p class="purchase_other">
+                                                                        Cena isporuke:</p>
+                                                                </td>
+                                                                <td width="40%" valign="middle">
+                                                                    <p class="purchase_other">{shipmentCost}</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="70%" valign="middle">
+                                                                    <p class="purchase_other">
+                                                                        Popust:</p>
+                                                                </td>
+                                                                <td width="40%" valign="middle">
+                                                                    <p class="purchase_other">{discount}</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="70%" class="purchase_footer" valign="middle">
+                                                                    <h3 class="purchase_total">
+                                                                        Ukupan iznos:<br />
+                                                                        <span id="PDV">*PDV je uračunat u cenu</span>
+                                                                    </h3>
+                                                                </td>
+                                                                <td width="40%" class="purchase_footer" valign="top">
+                                                                    <h3 class="purchase_total">{total}</h3>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <p>{shipmentInfoAdd}</p>
+
+                                            <table id="tabelaInfoKupac" class="purchase" width="100%" cellpadding="0"
+                                                cellspacing="0">
+                                                <tr>
+                                                    <th width="50%">
+                                                        <h3>Informacije o kupcu</h3>
+                                                    </th>
+                                                    <th>
+                                                        <h3>Informacije o isporuci</h3>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td>{name} {nameLast}</td>
+                                                    <td>{sh_name} {sh_nameLast}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{address}, {place}</td>
+                                                    <td>{sh_address}, {sh_place}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{email}</td>
+                                                    <td>{sh_phone}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>{phone}</td>
+                                                    <td><span class="span_bold">Način plaćanja:</span>
+                                                        {paymentMethodTxt} </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><span class="span_bold">Način isporuke:</span>
+                                                        {shipmentMethodName}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>{sh_note}</td>
+                                                </tr>
+                                            </table>
+
+
+                                            <table id="tabelaInfoKupac" class="purchase" width="100%" cellpadding="0"
+                                                cellspacing="0">
+                                                {invoice}
+                                            </table>
+
+                                            <table id="tabelaInfoKupac" class="purchase" width="100%" cellpadding="0"
+                                                cellspacing="0">
+                                                {paymentInfoAdd}
+                                            </table>
+
+
+                                            <!-- Sub copy -->
+                                            <table class="body-sub" role="presentation">
+                                                <tr>
+                                                    <td>
+                                                        <p class="sub">Molimo dodajte info@deltateks.rs u
+                                                            svoj adresar kako biste bili sigurni da naši mail-ovi stižu
+                                                            do Vas.</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td class="email-masthead">
+                                                        <img src="https://deltateks.rs/mail_src/logo42x42.png"
+                                                            alt="Deltateks logo">
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <table align="center" width="40%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td class="email-masthead">
+                                                        <a href="https://www.instagram.com/deltateks.rs/">
+                                                            <img width="20px"
+                                                                src="https://deltateks.rs/mail_src/instagram.png"
+                                                                alt="Instagram"></a>
+                                                    </td>
+                                                    <td class="email-masthead">
+                                                        <a href="https://www.facebook.com/deltateks">
+                                                            <img width="20px"
+                                                                src="https://deltateks.rs/mail_src/facebook.png"
+                                                                alt="Facebook"></a>
+                                                    </td>
+                                                    <td class="email-masthead">
+                                                        <a href="tel:+381112341507">
+                                                            <img width="20px"
+                                                                src="https://deltateks.rs/mail_src/phone.png"
+                                                                alt="Kontaktirajte nas"></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <table id="tableContact" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td width="50%" class="align-center">
+                                                        <a href="http://deltateks.gombashop.rs/contact-information.html"
+                                                            target="_blank">Kontaktiraj sa nama</a>
+                                                    </td>
+                                                    <td width="50%" class="align-center">
+                                                        <a href="http://deltateks.gombashop.rs/delivery.html"
+                                                            target="_blank">Uslovi
+                                                            poslovanja</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="email-footer align-center" width="570" cellpadding="0" cellspacing="0"
+                                role="presentation">
+                                <tr>
+                                    <td class="content-cell align-center">
+                                        <p class="sub align-center">&copy; 2021 Deltateks D.O.O. online,
+                                            proizvodnja i prodaja kućnog tekstila<br>
+                                            Pilota Mihaila Petrovića 81, 11090 Beograd, Srbija</p>
+                                        <p class="sub align-center">
+                                            Ovaj e-mail je poslat na {email}.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
