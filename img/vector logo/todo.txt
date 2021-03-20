@@ -1,0 +1,2 @@
+uradi veliki full logo za header
+i mali logo za footer moze 512x512 pa ga resize da bude 40x40
