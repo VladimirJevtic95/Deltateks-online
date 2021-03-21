@@ -1,0 +1,1 @@
+ovde otvori 3 foldera za google maps, instagram , facebook i za svaki readme sa dimenzijama i kako sta da se kaci

@@ -1,3 +1,3 @@
 # Deltateks-online
 
-###email templates for Delateks
+interni repo sa vise vrsta res.
