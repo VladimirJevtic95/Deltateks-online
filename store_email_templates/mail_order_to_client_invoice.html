@@ -29,7 +29,7 @@
         }
 
         /* td { */
-            /* word-break: break-word; */
+        /* word-break: break-word; */
         /* } */
 
         .preheader {
@@ -365,14 +365,15 @@
 </head>
 
 <body>
-    <span class="preheader">Tvoja narudžbina ({uniqueNumber}) iz Deltateksa.</span>
+    <span class="preheader">Vaša Deltateksa porudžbina ({uniqueNumber}).</span>
     <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
         <tr>
             <td align="center">
                 <table class="email-content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
                         <td class="email-masthead">
-                            <img src="https://deltateks.rs/mail_src/logomailtemplate.png" alt="Deltateks logo">
+                            <img src="https://internal-use.deltateks.rs/mail_src/logomailtemplate.png"
+                                alt="Deltateks logo">
                         </td>
                     </tr>
                     <!-- Email Body -->
@@ -387,7 +388,7 @@
                                                 cellspacing="0">
                                                 <tr>
                                                     <td>
-                                                        <p><span class="span_bold">Narudžbina:</span> {uniqueNumber}</p>
+                                                        <p><span class="span_bold">Porudžbina:</span> {uniqueNumber}</p>
                                                     </td>
                                                     <td>
                                                         <p class="align-right"><span class="span_bold">Datum:</span>
@@ -404,9 +405,9 @@
                                 <tr>
                                     <td class="content-cell">
                                         <div>
-                                            <h1>Primili smo tvoju narudžbinu! Hvala! </h1>
-                                            <P>Zdravo {name},<br /> Znamo da osećaš veliko
-                                                uzbuđenje i zato već naporno radimo da dobiješ pošiljku što je pre
+                                            <h1>Primili smo Vašu porudžbinu! Hvala! </h1>
+                                            <P>Pozdrav {name},<br /> Znamo da osećate veliko
+                                                uzbuđenje i zato naporno radimo da dobijete Vašu pošiljku što je pre
                                                 moguće.
                                             </P>
 
@@ -418,13 +419,13 @@
                                                             role="presentation">
                                                             <tr>
                                                                 <td>
-                                                                    <span class="span_bold">Broj narudžbine:</span>
+                                                                    <span class="span_bold">Broj porudžbine:</span>
                                                                     {uniqueNumber}
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <span class="span_bold">Datum narudžbine:</span>
+                                                                    <span class="span_bold">Datum porudžbine:</span>
                                                                     {orderDate}
                                                                 </td>
                                                             </tr>
@@ -447,12 +448,16 @@
 
                                             <hr class="hr">
 
-                                            <p>Ako želiš da proveriš status pošiljke u bilo koje doba, uloguj se na svoj
-                                                DELTATEKS.rs nalog. Poslaćemo ti novi e-mail čim završimo
-                                                pripremu tvoje pošiljke. Uzbudljivo, zar ne?</p>
+                                            <p>Ako želite da proverite status Vaše pošiljke u bilo koje doba, ulogujte
+                                                se na Vaš
+                                                <span class="span_bold">deltateks.rs</span> nalog.
+                                            </p>
 
                                             <p>Uobičajeni rok za paketne isporuke je između 1 i 4 radna dana od trenutka
                                                 preuzimanja paketa od strane kurirske sluzbe. </p>
+
+                                            <p>Ukoliko imate bilo kakva pitanja ne ustručavajte se da nas kontaktirate.
+                                            </p>
 
                                             <table id="tabelaOrder" class="purchase" width="100%" cellpadding="0"
                                                 cellspacing="0">
@@ -565,7 +570,7 @@
                                                 <tr>
                                                     <td>
                                                         <p class="sub">Molimo dodajte info@deltateks.rs u
-                                                            svoj adresar kako biste bili sigurni da naši mail-ovi stižu
+                                                            Vaš adresar kako biste bili sigurni da naši mail-ovi stižu
                                                             do Vas.</p>
                                                     </td>
                                                 </tr>
@@ -574,7 +579,7 @@
                                             <table width="100%" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td class="email-masthead">
-                                                        <img src="https://deltateks.rs/mail_src/logo42x42.png"
+                                                        <img src="https://internal-use.deltateks.rs/mail_src/logo42x42.png"
                                                             alt="Deltateks logo">
                                                     </td>
                                                 </tr>
@@ -585,19 +590,19 @@
                                                     <td class="email-masthead">
                                                         <a href="https://www.instagram.com/deltateks.rs/">
                                                             <img width="20px"
-                                                                src="https://deltateks.rs/mail_src/instagram.png"
+                                                                src="https://internal-use.deltateks.rs/mail_src/instagram.png"
                                                                 alt="Instagram"></a>
                                                     </td>
                                                     <td class="email-masthead">
                                                         <a href="https://www.facebook.com/deltateks">
                                                             <img width="20px"
-                                                                src="https://deltateks.rs/mail_src/facebook.png"
+                                                                src="https://internal-use.deltateks.rs/mail_src/facebook.png"
                                                                 alt="Facebook"></a>
                                                     </td>
                                                     <td class="email-masthead">
                                                         <a href="tel:+381112341507">
                                                             <img width="20px"
-                                                                src="https://deltateks.rs/mail_src/phone.png"
+                                                                src="https://internal-use.deltateks.rs/mail_src/phone.png"
                                                                 alt="Kontaktirajte nas"></a>
                                                     </td>
                                                 </tr>
@@ -607,7 +612,7 @@
                                                 <tr>
                                                     <td width="50%" class="align-center">
                                                         <a href="http://deltateks.gombashop.rs/kontakt.html"
-                                                            target="_blank">Kontaktiraj sa nama</a>
+                                                            target="_blank">Kontaktirajte nas</a>
                                                     </td>
                                                     <td width="50%" class="align-center">
                                                         <a href="http://deltateks.gombashop.rs/uslovi-poslovanja.html"
@@ -628,7 +633,7 @@
                                 role="presentation">
                                 <tr>
                                     <td class="content-cell align-center">
-                                        <p class="sub align-center">&copy; 2021 Deltateks D.O.O. online,
+                                        <p class="sub align-center">© 2021 Deltateks D.O.O. online,
                                             proizvodnja i prodaja kućnog tekstila<br>
                                             Pilota Mihaila Petrovića 81, 11090 Beograd, Srbija</p>
                                         <p class="sub align-center">

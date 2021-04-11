@@ -171,12 +171,24 @@ body, h1, h2, h3, h4, h5, h6 {
     color: var(--delta_red);
 }
 
+.breadcrumbs ul li.active a {
+    text-decoration: none;
+    color: black;
+}
+
 /*product page banner*/
 
 .gs-fw-banner {
     position: relative;
     padding: 0px!important;
     border: 0px solid !important;
+}
+
+/*mali banner home page text stil*/
+
+.gs-grid-banners .gs-text-wrap {
+    color: var(--text_first)!important;
+    text-shadow: 2px 2px 4px var(--background_third);
 }
 
 /*product page title and description*/
@@ -385,6 +397,13 @@ body, h1, h2, h3, h4, h5, h6 {
     font-family: var(--font)!important;
 }
 
+/*potvrditi text hover*/
+
+.gs-cart-table .gs-order-quantity a:hover {
+    font-weight: 600;
+    color: var(--button_blue_hover)!important;
+}
+
 .gs-cart-wrap .gs-total-sum strong {
     color: var(--text_first)!important;
     font-weight: 500!important;
@@ -472,20 +491,34 @@ body, h1, h2, h3, h4, h5, h6 {
 /*main page blog section*/
 
 .gs-floated-grid .gs-home-news {
-    border: 1px solid var(--input_field_border);
+    /*border: 1px solid var(--input_field_border);*/
     background: var(--background_first) !important;
-    padding: 5px 15px 0;
+    /*padding: 5px 15px 0;*/
+    padding: 15px;
 }
 
 .gs-floated-grid .gs-home-news:hover {
     border: none;
-    box-shadow: 5px 5px 10px var(--shadow_color_dark);
+    box-shadow: 3px 3px 7px var(--shadow_color_light);
 }
 
 .gs-floated-grid .news-text h6 {
     /*main blog title*/
     /*font-size: 18px;*/
     font-weight: bold!important;
+}
+
+/*blog main page, blog text*/
+
+.gs-floated-grid .news-text p {
+    line-height: 18px;
+}
+
+/*blog strana bloga - blog artikal*/
+
+.gs-news-title h1 {
+    font-size: 24px;
+    font-weight: 500;
 }
 
 /*news page*/
@@ -647,6 +680,12 @@ body, h1, h2, h3, h4, h5, h6 {
 
 /*izmeni dugme*/
 
+.checkout-info strong {
+    font-weight: 600;
+    font-family: var(--font)!important;
+    color: var(--text_second)!important;
+}
+
 .checkout-edit {
     padding-right: 28px!important;
     border-radius: 3px!important;
@@ -673,10 +712,10 @@ body, h1, h2, h3, h4, h5, h6 {
     /*todo*/
     /*box-shadow:-10px -10px 30px 0 red, 10px 10px 30px 0 green, -10px -10px 10px 0 yellow inset , 10px 10px 10px 0 blue inset;*/
     /*box-shadow:-10px -10px 10px 0 rgba(0,0,0,0.08), 10px 10px 10px 0 rgba(0,0,0,0.15);*/
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 4px 4px 6px var(--shadow_color_light);
     border-radius: 10px!important;
-    background: rgba(0, 0, 0, 0.08);
-    color: #141414!important;
+    background: var(--background_second)!important;
+    color: var(--text_first)!important;
 }
 
 .checkout-items ul {
@@ -864,6 +903,10 @@ header .header-text a {
     color: var(--text_second)!important;
 }
 
+header .header-text a:hover {
+    color: var(--delta_red)!important;
+}
+
 #sentMailMsg {
     color: var(--delta_red);
 }
@@ -875,15 +918,77 @@ header .header-text a {
     left: 0px!important;
 }
 
+/*brzi pregled hover dugme hover boja*/
+
+.gs-qw-button:after {
+    background: var(--delta_blue)!important;
+}
+
+/*brzi pregled hover dugme text boja*/
+
+.gs-qw-button span {
+    font-weight: 600;
+}
+
+/*order end screen*/
+
 /*order end screen*/
 
 .order-end p {
-    font-size: 13px;
+    font-size: 13px!important;
+}
+
+.order-end .number-holder {
+    border: 2px solid var(--delta_red)!important;
+    font-weight: 600!important;
+    font-family: var(--font)!important;
+    color: var(--delta_red)!important;
+}
+
+.back-to-shop {
+    border-radius: 5px!important;
+    background: var(--text_first)!important;
+    color: var(--color_white);
+    border: 1px solid var(--text_first)!important;
+}
+
+.back-to-shop:hover {
+    background: var(--color_white)!important;
+    color: var(--text_first)!important;
+    border: 1px solid var(--text_first)!important;
+}
+
+/*nacin preuzimanja proizvoda zadnji step u kupovini*/
+
+#storePickup {
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--text_first);
+}
+
+#storePickup:hover {
+    color: var(--delta_red);
+}
+
+/*radio button boja za nacin preuzimanja robe*/
+
+.pseudo-input.active-delivery:before {
+    background: var(--delta_red)!important;
+}
+
+.user .nav li {
+    background: var(--background_second)!important;
+}
+
+.user .nav li.active {
+    background: var(--background_first)!important;
+    color: var(--text_first)!important;
+    font-weight: 500;
 }
 
 /*logged in user. stranica trenutne porudzbine*/
 
-#sm0000012, #orderAgain0000012 {
+.user .show-more, .user .order-again {
     height: 31px!important;
 }
 
@@ -893,7 +998,137 @@ header .header-text a {
     display: none!important;
 }
 
+.powered-by {
+    display: none!important;
+}
+
+/*cart page gde je tabela svih proizvoda pa dugme da se delte*/
+
+.gs-cart-table .gs-order-remove a:hover {
+    background: var(--delta_red)!important;
+}
+
+/*cart page gde je tabela svih proizvoda pa dugme kada se menja kolicina koliko proizvoda zelimo*/
+
+.gs-cart-table .gs-order-quantity .gs-quantity-change span:hover {
+    background: var(--button_blue_hover)!important;
+}
+
+/*hover over the main menu of items spavacasoba->posteljine->jorgan navlaka*/
+
+.gs-menu-item .gs-sub-menu ul li a {
+    font-size: 13px;
+}
+
+.gs-menu-item .gs-sub-menu ul li a:hover {
+    text-decoration: underline!important;
+    color: var(--delta_red)!important;
+}
+
+/*Stranice proizvoda peskira, bademantila ,itd. tamo gde je opis i cena..*/
+
+.gs-item-detail-wrap {
+    border: none!important;
+    padding: 20px!important;
+}
+
+/*forma za add to cart*/
+
+.gs-add-cart-form .gs-cart-form {
+    border: 1px solid var(--input_field_border)!important;
+    border-radius: 10px!important;
+}
+
+/*forma ->select dimenzija*/
+
+.gs-cart-form .gs-select-wrap select {
+    border: 1px solid var(--input_field_border)!important;
+}
+
+/*forma -> biranje kolicine*/
+
+.gs-cart-form .gs-item-sum .gs-update-sum a {
+    background: var(--text_first)!important;
+    color: var(--color_white)!important;
+}
+
+.gs-cart-form .gs-item-sum .gs-update-sum a:hover {
+    background: var(--button_blue_hover)!important;
+}
+
+/*forma add to cart dugme kupi*/
+
+.gs-sbm-cart {
+    background: var(--button_blue_hover)!important;
+    color: var(--color_white)!important;
+    border-color: var(--button_blue_hover)!important;
+}
+
+.gs-sbm-cart:hover {
+    background: var(--color_white)!important;
+    color: var(--button_blue_hover)!important;
+    border-color: var(--button_blue_hover)!important;
+}
+
+/*kartice sastav i karakterstike proizvoda*/
+
+.gs-tabs-head .gs-tab {
+    background: var(--background_second)!important;
+    border-color: var(--input_field_border)!important;
+}
+
+.gs-tabs-head .gs-tab.active {
+    font-weight: 500;
+    background: var(--background_first)!important;
+    color: var(--text_first)!important;
+}
+
+.gs-tabs-body .gs-tab-table {
+    border: 1px solid var(--input_field_border)!important;
+    border-bottom: none!important;
+}
+
+.gs-tabs-body .gs-tab-table .gs-tab-cell:first-child {
+    background: var(--background_second)!important;
+    color: var(--text_first)!important;
+    font-weight: 500;
+}
+
+/*user profil- trenutne porudzbine poruci ponovo*/
+
+.gmbStdMsg .gmbStdMsgClose.gmb-buttonLeft {
+    cursor: pointer;
+    background: var(--button_blue)!important;
+    color: var(--color_white)!important;
+    font-family: var(--font)!important;
+    font-weight: 500;
+}
+
+.gmbStdMsg .gmbStdMsgClose.gmb-buttonLeft:hover {
+    background: var(--button_blue_hover)!important;
+    color: var(--color_white)!important;
+}
+
+.gmbStdMsg .gmbStdMsgClose.gmb-buttonRight {
+    cursor: pointer;
+    background: var(--text_third)!important;
+    color: var(--color_white)!important;
+    font-family: var(--font)!important;
+    font-weight: 500;
+}
+
+.gmbStdMsg .gmbStdMsgClose.gmb-buttonRight:hover {
+    background: var(--text_first)!important;
+    color: var(--color_white)!important;
+}
+
 /*MOBILE*/
+
+/*mobile*/
+
+/*mobile*/
+
+/*mobile*/
 
 /*mobile*/
 
@@ -1085,12 +1320,13 @@ header .header-text a {
     margin-bottom: 1px;
 }
 
+/*mobilni dugme na glavna strana za blog, dugme opsirnije*/
+
 .mgs-view-more.white {
-    /*mobile page contact FAQ button*/
-    border-color: #7FA7D8!important;
-    background: #7FA7D8!important;
+    border-color: var(--text_first)!important;
+    background: var(--text_first)!important;
     color: #FFFFFF!important;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .mgs-cart-form .mgs-select-wrap select {
@@ -1118,6 +1354,31 @@ header .header-text a {
 
 ._dev-faq-link {
     display: none!important;
+}
+
+/*mobilni footer izbaci powered by gomba*/
+
+.mgs-footer .mgs-f-marker-info span:nth-of-type(2) {
+    display: none!important;
+}
+
+/*mobilni footer izbaci FAQ*/
+
+.mgs-footer .mgs-footer-col.mgs-footer-col-pages span:nth-of-type(3) {
+    display: none!important;
+}
+
+/*mobilni kontakt izbaci FAQ dugme*/
+
+.mgs-contacts-text a.mgs-view-more {
+    display: none!important;
+}
+
+/*mobilni baner text na slici*/
+
+.mgs-banners-layout-1 .mgs-banner-title {
+    color: var(--text_first)!important;
+    text-shadow: 2px 2px 4px var(--background_third);
 }
 
 /*custom scrollbars*/
@@ -1156,16 +1417,58 @@ header .header-text a {
 
 /*dodatne izmene za izdavanje racuna hide neke elemente*/
 
-#userDataFrm h2:nth-of-type(3) {
-    display: none!important;
-}
+/*dodatne izmene za izdavanje racuna hide neke elemente*/
 
-#userDataFrm label:nth-of-type(16), #userDataFrm label:nth-of-type(17), #userDataFrm label:nth-of-type(18), #userDataFrm label:nth-of-type(19), #userDataFrm label:nth-of-type(20) {
-    display: none!important;
-}
+/*dodatne izmene za izdavanje racuna hide neke elemente*/
+
+/*dodatne izmene za izdavanje racuna hide neke elemente*/
+
+/*#userDataFrm h2:nth-of-type(3) {*/
+
+/*  display: none!important;*/
+
+/*}*/
+
+/*#userDataFrm label:nth-of-type(16),*/
+
+/*#userDataFrm label:nth-of-type(17),*/
+
+/*#userDataFrm label:nth-of-type(18),*/
+
+/*#userDataFrm label:nth-of-type(19),*/
+
+/*#userDataFrm label:nth-of-type(20){*/
+
+/*  display: none!important;*/
+
+/*}*/
 
 /*checkout polje za izdavanje racuna ili fakture, to se uvek izdaje*/
 
 /*.checkout-info:nth-of-type(4) p {
     display: none!important;
 }*/
+
+/*slajder za naziv artikla ili boju kada ih ima vise. nalazi se u FILTER bloku*/
+
+.mCSB_scrollTools .mCSB_dragger {
+    background: var(--delta_red)!important;
+}
+
+/*slajder za cenu artikla. nalazi se u FILTER bloku*/
+
+.noUi-handle {
+    background: var(--delta_red)!important;
+}
+
+/*dugme za promo kod*/
+
+.checkout .back {
+    margin-top: 10px;
+}
+
+/*dugme neko koje se random pojavilo na sred straice FAQ*/
+
+#gtx-trans {
+    display: none!important;
+}
