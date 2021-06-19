@@ -5,11 +5,17 @@
 
 > **4:5** 1080x1350px
 
-> **1.91:1** 608px
+> **1.91:1** 1080x608px
+
+
 - ### Instagram story
+
+
 > **9:16** 1080x1920px
 - ### Facebook post
 > 940×788px
+
+
 
 
 ## Social profiles
