@@ -1,6 +1,7 @@
-# Deltateks-online
+## Deltateks-online
+> internal repo
 
-interni repo sa vise vrsta res.
 
-https://internal-use.deltateks.rs/
-TEST59
+
+-[Deltateks online store](https://deltateks.rs/)
+-[Deltateks interlnal](https://internal-use.deltateks.rs/)
