@@ -3,5 +3,5 @@
 
 
 
--[Deltateks online store](https://deltateks.rs/)
--[Deltateks interlnal](https://internal-use.deltateks.rs/)
+- [Deltateks online store](https://deltateks.rs/)
+- [Deltateks interlnal](https://internal-use.deltateks.rs/)
