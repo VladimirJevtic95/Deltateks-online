@@ -329,9 +329,10 @@ img {
     margin-bottom: var(--mb-2);
 }
 
-.home__scroll {
+/* TODO */
+/* .home__scroll { */
     /* display: none; */
-}
+/* } */
 
 .home__scroll-button {
     color: var(--first-color);
@@ -572,6 +573,7 @@ img {
 }
 
 /* TODO ?? kao timeline */
+
 .qualification__data {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
@@ -660,6 +662,8 @@ img {
     cursor: pointer;
     font-size: var(--small-font-size);
 }
+
+/* TODO pomera se ikonica na hover  */
 
 .services__button:hover .button__icon {
     transform: translateX(.25rem);
