@@ -1,10 +1,10 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 /*===== VARIABLES CSS =====*/
+
 :root {
   --header-height: 3rem;
-
   /*========== Colors ==========*/
   --title-color: #0b0a0a;
   --text-color: #403a3a;
@@ -12,7 +12,6 @@
   --container-color: #fafafa;
   --container-color-alt: #f0efef;
   --body-color: #fcfcfc;
-
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
   --h1-font-size: 1.5rem;
@@ -21,25 +20,21 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.813rem;
-
   /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
-
   /*========== Margenes ==========*/
   --mb-1: 0.5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
-
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
 /*========== BASE ==========*/
-*,
-::before,
-::after {
+
+*, ::before, ::after {
   box-sizing: border-box;
 }
 
@@ -56,6 +51,7 @@ html {
 /*========== Generate PDF button ==========*/
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
+
 body {
   margin: 0 0 var(--header-height) 0;
   padding: 0;
@@ -65,17 +61,11 @@ body {
   color: var(--text-color);
 }
 
-h1,
-h2,
-h3,
-ul,
-p {
+h1, h2, h3, ul, p {
   margin: 0;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
@@ -93,6 +83,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 /*========== CLASS CSS ==========*/
 
 .section {
@@ -110,6 +101,7 @@ img {
 }
 
 /*========== LAYOUT ==========*/
+
 .bd-container {
   max-width: 968px;
   width: calc(100%-3rem);
@@ -134,6 +126,7 @@ img {
 }
 
 /*========== NAV ==========*/
+
 .nav {
   height: var(--header-height);
   display: flex;
@@ -144,7 +137,8 @@ img {
 @media screen and (max-width: 968px) {
   .nav__menu {
     position: fixed;
-    bottom: var(--header-height);
+    /* bottom: var(--header-height); */
+    bottom: -100%;
     left: 0;
     width: 100%;
     padding: 2rem 1.5rem;
@@ -156,8 +150,7 @@ img {
   }
 }
 
-.nav__logo,
-.nav__toggle {
+.nav__logo, .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
@@ -185,17 +178,163 @@ img {
   font-weight: var(--font-medium);
 }
 
+.nav__link:hover {
+  color: var(--title-color);
+}
+
+.nav__icon {
+  font-size: 1.2rem;
+  margin-bottom: var(--mb-1);
+}
+
 /* Show menu */
+
+.show-menu {
+  bottom: var(--header-height);
+}
 
 /* Active menu link */
 
+.active-link {
+  color: var(--title-color);
+}
+
 /*========== HOME ==========*/
+
+.home {
+  position: relative;
+}
+
+.home__container {
+  gap: 3rem;
+}
+
+.home__data {
+  gap: .5rem;
+  text-align: center;
+}
+
+.home__img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  justify-self: center;
+  margin-bottom: var(--mb-1);
+}
+
+.home__title {
+  font-size: var(--h1-font-size);
+}
+
+.home__profession {
+  font-size: var(--normal-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.home_address {
+  gap: 1rem;
+}
+
+.home__information {
+  display: flex;
+  align-items: center;
+  font-size: var(--small-font-size);
+}
+
+.home__icon {
+  font-size: 1.2rem;
+  margin-right: .25rem;
+}
+
+.home__button-movil {
+  display: inline-block;
+  border: 2px solid var(--text-color);
+  color: var(--title-color);
+  padding: 1rem 2rem;
+  border-radius: .25rem;
+  transition: .3s;
+  font-weight: var(--font-medium);
+  margin-top: var(--mb-3);
+}
+
+.home__button-movil:hover {
+  background-color: var(--text-color);
+  color: var(--container-color);
+}
 
 /*========== SOCIAL ==========*/
 
+.social__container {
+  grid-template-columns: max-content;
+  gap: 1rem;
+}
+
+.social__link {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.social__link:hover {
+  color: var(--title-color);
+}
+
+.social__icon {
+  font-size: 1.2rem;
+  margin-right: .25rem;
+}
+
 /*========== PROFILE ==========*/
 
+.profile__description {
+  text-align: center;
+}
+
 /*========== EDUCATION AND EXPERIENCE ==========*/
+
+.education__content {
+  display: flex;
+}
+
+.education__time {
+  padding-right: 1rem;
+}
+
+.education__rounder {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin-top: .25rem;
+}
+
+.education__line {
+  display: block;
+  width: 2px;
+  height: 110%;
+  background-color: var(--text-color-light);
+  transform: translate(7px, 0);
+}
+
+.education__data {
+  gap: .5rem;
+}
+
+.education__title {
+  font-size: var(--h3-font-size);
+}
+
+.education__studies {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.education__year {
+  font-size: var(--small-font-size)
+}
 
 /*========== SKILLS AND LANGUAGES ==========*/
 
@@ -208,6 +347,7 @@ img {
 /* Scroll top */
 
 /*========== MEDIA QUERIES ==========*/
+
 /* For small devices, menu two columns */
 
 /* Classes modified for large screen size */
